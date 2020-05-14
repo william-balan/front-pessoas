@@ -1,0 +1,38 @@
+<mat-toolbar> 
+    <mat-toolbar-row class="mat-elevation-z6">
+        <a mat-button href="#">
+            <mat-icon [matBadge]="notificationAmount" [matBadgeHidden]="notificationAmount <= 0" matBadgeColor="warn">home</mat-icon>
+            <span> Início </span> 
+        </a>
+        <a mat-button href="#">
+            <mat-icon>local_movies</mat-icon>
+            <span> Conteúdo </span> 
+        </a>
+        <a mat-button href="#">
+            <mat-icon>menu_book</mat-icon>
+            <span> ATA </span> 
+        </a>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-toolbar>
+    <mat-toolbar-row>
+        <span> algap </span>
+    </mat-toolbar-row>
+</mat-toolbar>
+<div class="algap-container">
+    <app-ata></app-ata>
+</div>
+<!-- <mat-sidenav-container class="example-container" style="height: 100%;">
+
+  <mat-sidenav #sidenav mode="side" opened>
+    <mat-nav-list>
+
+        <a mat-list-item [routerLink]="'/acm'"> Conteúdos </a>
+        <a mat-list-item [routerLink]="'/ata'"> ATA </a>
+  
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>Main content</mat-sidenav-content>
+
+</mat-sidenav-container>
+   -->

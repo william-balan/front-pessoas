@@ -1,0 +1,11 @@
+.mat-form-field {
+    width: 40% !important;
+}
+
+.ata-container span {
+    padding: 10px;
+}
+
+mat-divider {
+    padding: 10px;
+}
