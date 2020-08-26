@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent {
 
-  notificationAmount = 1;
-
+  constructor() {
+    let nome = "William";
+    console.log("olá ${nome}");
+    
+  }
 }

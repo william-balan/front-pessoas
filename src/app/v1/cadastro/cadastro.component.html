@@ -1,0 +1,66 @@
+<button mat-button title="Nova Pessoa" (click)="limpar()">
+    <mat-icon>add_box</mat-icon>
+</button>
+<button mat-button title="Salvar" (click)="cadastrar()">
+    <mat-icon>save</mat-icon>
+</button>
+<a routerLink="/v1/listar" mat-button title="Ir para pesquisa">
+    <mat-icon>search</mat-icon>
+</a>
+<form class="v1-form">
+    <span class="v1-container">
+        <mat-form-field>
+            <mat-label>Código</mat-label>
+            <input [(ngModel)]="pessoa.id" name="id" disabled matInput>
+        </mat-form-field> 
+    </span>
+    <span class="v1-container">
+        <mat-form-field class="example-full-width">
+            <mat-label>Nome</mat-label>
+            <input [(ngModel)]="pessoa.nome" name="nome" matInput>
+        </mat-form-field>
+      </span>
+      <br/>
+      <span class="v1-container">
+        <mat-form-field>
+            <mat-label>Sexo</mat-label>
+            <mat-select>
+                <mat-option> Masculino </mat-option>
+                <mat-option> Feminino </mat-option>
+            </mat-select>
+        </mat-form-field>
+      </span>
+      <span class="v1-container">
+        <mat-form-field>
+            <mat-label>E-mail</mat-label>
+            <input [(ngModel)]="pessoa.email" name="email" matInput>
+        </mat-form-field>
+      </span>
+      <span class="v1-container">
+        <mat-form-field>
+            <mat-label>Data de Nascimento</mat-label>
+            <input [(ngModel)]="pessoa.dataNascimento" name="dataNascimento" matInput>
+        </mat-form-field>
+    </span>
+    <br/>
+    <span class="v1-container">
+        <mat-form-field>
+            <mat-label>Naturalidade</mat-label>
+            <input [(ngModel)]="pessoa.naturalidade" name="naturalidade" matInput>
+        </mat-form-field>
+      </span>
+      <span class="v1-container">
+        <mat-form-field>
+            <mat-label>Nacionalidade</mat-label>
+            <input [(ngModel)]="pessoa.nacionalidade" name="nacionalidade" matInput>
+        </mat-form-field>
+      </span>
+      <span class="v1-container">
+        <mat-form-field>
+            <mat-label>CPF</mat-label>
+            <input [(ngModel)]="pessoa.cpf" name="cpf" matInput>
+        </mat-form-field>
+      </span>
+
+    <br/>
+</form>

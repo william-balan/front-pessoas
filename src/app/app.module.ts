@@ -20,18 +20,34 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import {TextFieldModule} from '@angular/cdk/text-field'
 
-import { AcmComponent } from './acm/acm.component';
-import { AtaComponent } from './ata/ata.component'
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { CadastroComponent } from './v1/cadastro/cadastro.component';
+import { V1Module } from './v1/v1.module';
+import { ListagemComponent } from './v1/listagem/listagem.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { V2Module } from './v2/v2.module';
+import { CadastroV2Component } from './v2/cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    AcmComponent,
-    AtaComponent
+    HomeComponent
   ],
   imports: [
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent },
+      { path: 'v1', component: CadastroComponent },
+      { path: 'v1/listar', component: ListagemComponent },
+
+      { path: 'v2', component: CadastroV2Component },
+      { path: 'v2/listar', component: ListagemComponent },
+    ]),
+    // CadastroV2Component,
+    V1Module,
+    V2Module,
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
